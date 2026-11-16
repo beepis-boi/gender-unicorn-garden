@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dg4rg0wftqpol"]
+
+[ext_resource type="Texture2D" uid="uid://brvxc3gb1jj50" path="res://Pii_GYAROPPU_2eyeM.png" id="1_wg6tf"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_wg6tf")
+metallic_specular = 0.0

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://4auw5c5spui4"]
+
+[ext_resource type="Texture2D" uid="uid://debpoxtipotle" path="res://prideflags/gender/images(3).png" id="1_ep4sm"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_ep4sm")

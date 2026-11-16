@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://gs6j2xowregg"]
+
+[ext_resource type="Script" uid="uid://os1pmw5k18ox" path="res://spawner.gd" id="1_hpl22"]
+[ext_resource type="Material" uid="uid://cgxlkbgmbxixk" path="res://grass.tres" id="2_eocwn"]
+[ext_resource type="Script" uid="uid://bxd1dknfpkou3" path="res://horse_3d.gd" id="3_ag2nc"]
+[ext_resource type="PackedScene" uid="uid://bt8x5hq27p1u2" path="res://genderunicorn.gltf" id="4_scjgn"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6ek8i"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lq4on"]
+
+[node name="Node3D" type="Node3D" unique_id=1119239807]
+transform = Transform3D(5.107469, 0, 0, 0, 1, 0, 0, 0, 3.9728074, 0, 0, 0)
+script = ExtResource("1_hpl22")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=213519572]
+transform = Transform3D(461.33905, 0, 0, 0, 3.863, 0, 0, 0, 498.11865, 0, 0, 0)
+material_override = ExtResource("2_eocwn")
+mesh = SubResource("PlaneMesh_6ek8i")
+
+[node name="Horse3D" type="CharacterBody3D" parent="." unique_id=1004661783]
+script = ExtResource("3_ag2nc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Horse3D" unique_id=801720576]
+shape = SubResource("CapsuleShape3D_lq4on")
+
+[node name="genderunicorn" parent="Horse3D/CollisionShape3D" unique_id=772834463 instance=ExtResource("4_scjgn")]
+transform = Transform3D(1, 0, 0, 0, 4.005, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Timer" type="Timer" parent="Horse3D/CollisionShape3D/genderunicorn" unique_id=1036424194]

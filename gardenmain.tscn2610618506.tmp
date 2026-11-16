@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://gs6j2xowregg"]
+
+[ext_resource type="Script" uid="uid://os1pmw5k18ox" path="res://spawner.gd" id="1_hpl22"]
+[ext_resource type="Material" uid="uid://cgxlkbgmbxixk" path="res://grass.tres" id="2_eocwn"]
+[ext_resource type="PackedScene" uid="uid://c1re3xkgy6rc7" path="res://horse.tscn" id="3_ltg4d"]
+[ext_resource type="Script" uid="uid://22m6esoyg44x" path="res://herdcamera.gd" id="4_hpl22"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ltg4d"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x36f0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x36f0"]
+
+[node name="Node3D" type="Node3D" unique_id=1119239807]
+transform = Transform3D(5.107469, 0, 0, 0, 1, 0, 0, 0, 3.9728074, 0, 0, 0)
+script = ExtResource("1_hpl22")
+horse_scene = ExtResource("3_ltg4d")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2014509397]
+transform = Transform3D(0.19579169, 0, 0, 0, 0.42185372, 0.9066639, 0, -0.22821745, 0.1061853, 0, 65.86678, 12.554176)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=213519572]
+transform = Transform3D(203.21901, 0, 0, 0, 3.7085078, 0, 0, 0, 219.42047, 0, -1.9732919, 0)
+material_override = ExtResource("2_eocwn")
+mesh = SubResource("BoxMesh_ltg4d")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1016468945]
+physics_material_override = SubResource("PhysicsMaterial_x36f0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=710326203]
+shape = SubResource("BoxShape3D_x36f0")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1550907585 node_paths=PackedStringArray("herd_manager")]
+transform = Transform3D(0.19579169, 0, 0, 0, 0.61395776, 0.7893389, 0, -0.19868544, 0.15454005, -2.9875441e-06, 39.62996, 4.2418723)
+current = true
+fov = 72.3
+script = ExtResource("4_hpl22")
+herd_manager = NodePath("..")
+overview_offset = Vector3(0, 15, 70)
+zoom_distance = 7.0
+zoom_height = 4.0

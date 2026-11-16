@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cx0fwddax5bec"]
+
+[ext_resource type="Texture2D" uid="uid://dg5ljsw5waeek" path="res://prideflags/gender/330px-Nonbinary_flag.svg_png.png" id="1_4tbun"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_4tbun")

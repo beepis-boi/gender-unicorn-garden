@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://vkuya18jwb88"]
+
+[ext_resource type="Texture2D" uid="uid://b1ghlf5qxwh1e" path="res://prideflags/attraction/Sapphic_Flag_alternate_with_violet.svg.png" id="1_4gw2v"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_4gw2v")

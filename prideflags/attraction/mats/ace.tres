@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dfv5ini80ufsa"]
+
+[ext_resource type="Texture2D" uid="uid://buqv33w07qfen" path="res://prideflags/attraction/images.png" id="1_txxxf"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_txxxf")

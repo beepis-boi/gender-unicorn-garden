@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://sjl50xu8i3io"]
+
+[ext_resource type="Texture2D" uid="uid://ck4emhctshiw5" path="res://prideflags/gender/1280px-Transgender_Pride_flag.svg_png.png" id="1_ogsen"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_ogsen")

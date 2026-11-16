@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c1re3xkgy6rc7"]
+
+[ext_resource type="Script" uid="uid://bkd52hridfmke" path="res://horse.gd" id="1_2bhuw"]
+[ext_resource type="Material" uid="uid://duhy2lgcl6gq4" path="res://prideflags/attraction/mats/het.tres" id="2_2tnly"]
+[ext_resource type="Material" uid="uid://d3f7i1lc1r4hx" path="res://prideflags/gender/mats/cis.tres" id="2_t5mog"]
+[ext_resource type="Material" uid="uid://csbj1ux4dig2i" path="res://prideflags/attraction/mats/gay.tres" id="3_b683x"]
+[ext_resource type="Material" uid="uid://cx0fwddax5bec" path="res://prideflags/gender/mats/nb.tres" id="3_hpr0g"]
+[ext_resource type="Material" uid="uid://ca4prj1578755" path="res://prideflags/attraction/mats/lesbian.tres" id="4_1rapy"]
+[ext_resource type="AudioStream" uid="uid://b7jjljl3cnict" path="res://sfx/hop.wav" id="4_87efx"]
+[ext_resource type="Material" uid="uid://sjl50xu8i3io" path="res://prideflags/gender/mats/trans.tres" id="4_sgqbr"]
+[ext_resource type="Material" uid="uid://mk0vvaac313r" path="res://horsemats/purpbod.tres" id="4_w18gr"]
+[ext_resource type="AudioStream" uid="uid://2ktrb4pvfs5s" path="res://sfx/cry.wav" id="5_87efx"]
+[ext_resource type="Material" uid="uid://bdd7iffwope36" path="res://prideflags/gender/mats/demib.tres" id="5_hnyun"]
+[ext_resource type="Material" uid="uid://e6i6k4m6iluy" path="res://prideflags/attraction/mats/bi.tres" id="5_sponf"]
+[ext_resource type="Material" uid="uid://bmyxuy7v2kaun" path="res://prideflags/gender/mats/demig.tres" id="6_kv3r5"]
+[ext_resource type="Material" uid="uid://buu5raelr80gs" path="res://prideflags/attraction/mats/pan.tres" id="6_phnv6"]
+[ext_resource type="Material" uid="uid://728qqtf8v8ux" path="res://prideflags/attraction/mats/aro.tres" id="7_j6ufe"]
+[ext_resource type="Material" uid="uid://4auw5c5spui4" path="res://prideflags/gender/mats/agender.tres" id="7_rjhac"]
+[ext_resource type="Material" uid="uid://dfv5ini80ufsa" path="res://prideflags/attraction/mats/ace.tres" id="8_prauw"]
+[ext_resource type="Material" uid="uid://dg4rg0wftqpol" path="res://horsemats/eyem.tres" id="8_sgqbr"]
+[ext_resource type="ArrayMesh" uid="uid://cvmpigecjnj5x" path="res://genderunicornupright2.glb" id="8_t5mog"]
+[ext_resource type="Material" uid="uid://cgvnd5acitiou" path="res://horsemats/eyef.tres" id="9_hnyun"]
+[ext_resource type="Material" uid="uid://vkuya18jwb88" path="res://prideflags/attraction/mats/sapphic.tres" id="9_rkeju"]
+[ext_resource type="Material" uid="uid://e37whygusx76" path="res://prideflags/attraction/mats/achilean.tres" id="10_u4wie"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vj4nb"]
+
+[node name="Node3D" type="Node3D" unique_id=161900091]
+script = ExtResource("1_2bhuw")
+mane_materials = Array[Material]([ExtResource("2_2tnly"), ExtResource("3_b683x"), ExtResource("4_1rapy"), ExtResource("5_sponf"), ExtResource("6_phnv6"), ExtResource("7_j6ufe"), ExtResource("8_prauw"), ExtResource("9_rkeju"), ExtResource("10_u4wie")])
+tail_materials = Array[Material]([ExtResource("2_2tnly"), ExtResource("3_b683x"), ExtResource("4_1rapy"), ExtResource("5_sponf"), ExtResource("6_phnv6"), ExtResource("7_j6ufe"), ExtResource("8_prauw"), ExtResource("9_rkeju"), ExtResource("10_u4wie")])
+horn_materials = Array[Material]([ExtResource("2_t5mog"), ExtResource("3_hpr0g"), ExtResource("4_sgqbr"), ExtResource("5_hnyun"), ExtResource("6_kv3r5"), ExtResource("7_rjhac")])
+eye_materials = Array[Material]([ExtResource("8_sgqbr"), ExtResource("9_hnyun")])
+mane_surface_index = 2
+tail_surface_index = 3
+horn_surface_index = 1
+hop_interval_min = 0.3
+hop_interval_max = 3.0
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1107356720]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=423321992]
+shape = SubResource("CapsuleShape3D_vj4nb")
+
+[node name="merged_0_0_node2" type="MeshInstance3D" parent="CharacterBody3D/CollisionShape3D" unique_id=718767086]
+transform = Transform3D(3, 0, 0, 0, 12, 0, 0, 0, 3, 0, 0, 0)
+mesh = ExtResource("8_t5mog")
+surface_material_override/0 = ExtResource("4_w18gr")
+surface_material_override/1 = ExtResource("2_t5mog")
+
+[node name="hopAudio" type="AudioStreamPlayer3D" parent="." unique_id=1246809189]
+transform = Transform3D(1, 0, 0, 0, 0.25, 0, 0, 0, 1, 0, 0.3923579, 3.5433998)
+stream = ExtResource("4_87efx")
+attenuation_model = 2
+volume_db = 1.0
+max_db = 1.321
+attenuation_filter_cutoff_hz = 10018.0
+
+[node name="cryAudio" type="AudioStreamPlayer3D" parent="." unique_id=934552699]
+transform = Transform3D(1, 0, 0, 0, 0.25, 0, 0, 0, 1, 0, 0.3923579, 3.5433998)
+stream = ExtResource("5_87efx")
+volume_db = -8.553
+max_db = 1.321
+attenuation_filter_cutoff_hz = 10018.0

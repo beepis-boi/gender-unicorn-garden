@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://728qqtf8v8ux"]
+
+[ext_resource type="Texture2D" uid="uid://bfo8ausi3g01j" path="res://prideflags/attraction/1280px-Aromantic_Pride_Flag.svg_png.png" id="1_ulu1f"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_ulu1f")

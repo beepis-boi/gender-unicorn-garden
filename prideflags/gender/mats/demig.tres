@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bmyxuy7v2kaun"]
+
+[ext_resource type="Texture2D" uid="uid://jubhlhb0ikv5" path="res://prideflags/gender/960px-Demigirl_Flag.svg_png.png" id="1_ad3m3"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_ad3m3")

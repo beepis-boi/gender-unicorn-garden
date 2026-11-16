@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cgxlkbgmbxixk"]
+
+[ext_resource type="Texture2D" uid="uid://c7lvhe5gfypda" path="res://3DS - Animal Crossing_ New Leaf - Environment - Grass _ Snow.png" id="1_0ifrx"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_0ifrx")
+uv1_scale = Vector3(89.485, 89.485, 89.485)

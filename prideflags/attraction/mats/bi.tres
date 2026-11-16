@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://e6i6k4m6iluy"]
+
+[ext_resource type="Texture2D" uid="uid://o05nejhu2lsb" path="res://prideflags/attraction/Bisexual_Pride_Flag.svg.png" id="1_ar10h"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_ar10h")

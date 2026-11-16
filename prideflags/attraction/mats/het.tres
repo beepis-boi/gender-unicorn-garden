@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://duhy2lgcl6gq4"]
+
+[ext_resource type="Texture2D" uid="uid://bmg56i1oa5vgv" path="res://prideflags/attraction/250px-Heterosexual_flag_-28black-white_stripes-29.svg_png.png" id="1_vwfk5"]
+
+[resource]
+diffuse_mode = 3
+albedo_texture = ExtResource("1_vwfk5")
